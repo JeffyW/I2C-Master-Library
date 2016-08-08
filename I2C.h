@@ -106,14 +106,13 @@ public:
 	uint8_t read(uint8_t address, uint8_t numberBytes);
 	uint8_t read(uint8_t address, uint8_t registerAddress, uint8_t numberBytes);
 	uint8_t read(uint8_t address, uint8_t numberBytes, uint8_t *dataBuffer);
-	uint8_t read(uint8_t address, uint8_t registerAddress, uint8_t numberBytes, uint8_t *dataBuffer);
-
+	uint8_t read(uint8_t address, uint8_t registerAddress, uint8_t numberBytes, uint8_t *dataBuffer, bool reverse = false);
 
 private:
 	uint8_t start();
 	uint8_t sendAddress(uint8_t i2cAddress);
 	uint8_t sendByte(uint8_t i2cData);
-	uint8_t receiveByte(uint8_t ack);
+	uint8_t receiveByte(bool ack);
 	uint8_t stop();
 	void lockUp();
 	uint8_t returnStatus;
