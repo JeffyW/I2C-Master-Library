@@ -53,6 +53,12 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+// TODO: Port to Due (SAM hardware)
+// References:
+// \AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.9\system\libsam\source\twi.c
+// \AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.9\libraries\Wire\src\Wire.cpp
+//                                                                                 \Wire.h
+
 #if(ARDUINO >= 100)
 #include <Arduino.h>
 #else
